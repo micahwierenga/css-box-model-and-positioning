@@ -509,23 +509,21 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 `Clear` is saying "I'm not sure how much space I'm going to take but whatever it is clear off my right side" so our 
 text respects its wishes and drops to the line below.
 
-## Positioning Excercise 
-Here's a team excercise to test some of your positioning chops. 
-
-In the two column folders there two web pages that share a common CSS file. See if you can work in your team to add
-some styles to CSS file to reproduce these two screenshots.
-
-![two column screenshot 1](https://github.com//images/two_column_1.png)
-![two column screenshot 2](https://github.com//images/two_column_2.png)
-
-[CFU]: <> (Ask about what the first step in the process might be. Open Chrome Dev Tools.)
-
-
 ## Conclusion
 
 - Compare the elements of The Box Model - margin, border, padding, content.
 - How do floats work with clears to create a multicolumn layout?
 - Compare inline-block, block, and inline.
+
+## Positioning Excercise 
+
+Here's an excercise to test some of your positioning chops. 
+
+In the two column folders there are two web pages that share a common CSS file. See if you can work with a team to add
+some styles to a CSS file in order to reproduce these two screenshots.
+
+![two column screenshot 1](/images/two_column_1.png)
+![two column screenshot 2](/images/two_column_2.png)
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
