@@ -9,6 +9,8 @@
 
 <!--10:05 5 minutes -->
 
+<!-- Hook: Raise your hand if you have played Tetris before.  Think about trying to fit all those pieces together.  15 pieces have come through, and you just need that damn 4-blocks-in-a-line, but you keep getting those Ls.  Now you understand the frustration of the CSS Box Model and Positioning in web development. -->
+
 # CSS Box Model and Positioning
 
 ### Objectives
