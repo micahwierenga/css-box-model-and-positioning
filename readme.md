@@ -1,42 +1,48 @@
 <!--
     Author: Baseline Curriculum 2.0
-    Edited: WDI29, Ben Hulan, John Barela
+    Edited: Ben Hulan, John Barela
     Market: SF, Den
 
 -->
+
+<!--Time is still tight here.  If we can cut things out, we should. -->
+
+<!--10:05 5 minutes -->
 
 # CSS Box Model and Positioning
 
 ### Objectives
 *After this lesson, students will be able to:*
 
-- Describe the difference between block, inline, and inline-block elements
-- Adjust element spacing using padding and margin
-- Create floating elements to position content removed from the standard document flow
-- Explain the difference between and use cases of static, relative, fixed, & absolute positioning
-- Create a page with multi-column layout
+- **Describe** the difference between block, inline, and inline-block elements
+- **Adjust** element spacing using padding and margin
+- **Create** floating elements to position content removed from the standard document flow
+- **Explain** the difference between and use cases of static, relative, fixed, & absolute positioning
+- **Create** a page with multi-column layout
 
 ### Preparation
 *Before this lesson, students should already be able to:*
 
-- Write basic CSS
-- Write basic HTML
-- Use the chrome console
+- **Write** basic CSS
+- **Write** basic HTML
+- **Use** Chrome Developer Tools
 
 ## An Intro to The Box Model
 
 All HTML elements can be considered boxes. Even if you see a circle, it's living within a box.
 
-The CSS box model describes this principal - a box wraps around all HTML elements, and it consists of: margins, borders, padding, and the actual content.  This model allows us to place a border around elements and space elements in relation to other elements.
+The CSS box model describes this principle - a box wraps around all HTML elements, and it consists of: margins, borders, padding, and the actual content.  This model allows us to place a border around elements and space elements in relation to other elements.
 
 With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
+
+<!--10:10 10 minutes -->
 
 ## Box Model Demo - Catch Up
 
 Let's write some HTML we can come back to and use to visualize what we're talking about.
 
-- Create an new directory called `box-model-work`
-- Create html page called `index.html` with an externally linked css stylesheet called `main.css`
+- Create a new directory called `box-model-work`
+- Create an html page called `index.html` with an externally linked css stylesheet called `main.css`
 - Inside your html page create a "container" div holding four divs within.
 - Inside our CSS page, make the container a 500px gray square containing 100px squares within that are red, blue, green, and black.
 
@@ -94,7 +100,9 @@ How about if we drop this code into our CSS file:
 }
 ```
 
-Notice the body, the container, and each of the divs are surrounded by a red border.  Peak at the styles tab on the right and scroll all the way to the bottom.  You'll notice boxes within boxes - madness!
+Notice the body, the container, and each of the divs are surrounded by a red border.  Peek at the styles tab on the right and scroll all the way to the bottom.  You'll notice boxes within boxes - madness!
+
+<!--10:20 10 or 15 minutes-->
 
 ## The Box Model and its components - Intro
 
@@ -114,6 +122,8 @@ But what do these different layers mean, and how are they relating to one anothe
 * **Padding** - clears an area around the content; the space between the content and the border; the padding is affected by the background color of the box
 
 * **Content** - The content of the box, where text and images appear
+
+<!-- CFU: Catch phrase with all four words -->
 
 #### Layers of the Box Model - Catch Up
 
@@ -149,7 +159,7 @@ div {
 }
 ```
 
-You can do top-bottom and side side - let's add this to our css for now:
+You can also do top-bottom and side-side - let's add this to our css for now:
 
 ```css
 div {
@@ -161,8 +171,6 @@ div {
 
 We've talked briefly about borders - the border is the edge of the element. It's what we've been making visible every 
 time we set the border property.
-
-Borders can be set in two ways, just like your margins and just like we've talked about previously.
 
 Lets add some thick borders to our `<div>`'s by removing the `!important` from the `*` selector and adding:
 
@@ -216,6 +224,7 @@ p {
 
 Amazing!  Add those styles to your CSS file.
 
+<!--10:30 10 minutes -->
 
 ## Taking Up Space using Display - Intro
 
@@ -279,6 +288,10 @@ With this CSS:
 We would end up with something like this:
 
 ![display](https://i.imgur.com/zeD1f2m.png)
+
+<!--CFU: Catch-phrase with block, inline, inline-block -->
+
+<!--10:40 10 minutes -->
 
 ## Positioning - Catch Up
 
@@ -373,6 +386,7 @@ Specifying `position:absolute` _removes the element from the document_ and place
 }
 ```
 
+<!--10:50 5 minutes -->
 
 ## Floats and Clears - Intro
 
@@ -399,7 +413,9 @@ All elements will float next to floated items until they are specifically cleare
 <img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
 </p>
 
-## Using position, floats, and clears to create columns - Code along (20 mins)
+<!-- 10:55 15 minutes -->
+
+## Using position, floats, and clears to create columns - Code along
 
 Now that we have the basics of relative and absolute positioning, lets create a two column layout by changing the 
 heights; then, we'll investigate how to do this with floats and clears for a more effective approach.  
