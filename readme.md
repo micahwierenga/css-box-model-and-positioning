@@ -319,7 +319,7 @@ example.
 
 ![css position relative](https://i.imgur.com/LRd7lBy.png)
 
-The relative positioning on the parent is what matters here. This what would happen if we forgot that:
+The relative positioning on the parent is what matters here. This is what would happen if we forgot that:
 
 ![](https://i.imgur.com/0vGcPFL.png)
 
@@ -544,8 +544,8 @@ text respects its wishes and drops to the line below.
 ## Conclusion
 <!--Think-pair-share -->
 - Compare the elements of The Box Model - margin, border, padding, content.
-- How do floats work with clears to create a multicolumn layout?
 - Compare inline-block, block, and inline.
+- How do floats work with clears to create a multicolumn layout?
 
 ## Positioning Excercise 
 
