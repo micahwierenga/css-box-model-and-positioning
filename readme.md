@@ -9,7 +9,7 @@
 
 <!--10:05 5 minutes -->
 
-<!-- Hook: Raise your hand if you have played Tetris before.  Think about trying to fit all those pieces together.  15 pieces have come through, and you just need that damn 4-blocks-in-a-line, but you keep getting those Ls.  Now you understand the frustration of the CSS Box Model and Positioning in web development. -->
+<!-- Hook: Raise your hand if you have played Tetris before.  Think about trying to fit all those pieces together.  15 pieces have come through, and you just need that 4-blocks-in-a-line, but you keep getting those Ls.  Now you understand the frustration of the CSS Box Model and Positioning in web development. -->
 
 # CSS Box Model and Positioning
 
@@ -48,7 +48,12 @@ Let's write some HTML we can come back to and use to visualize what we're talkin
 - Inside your html page create a "container" div holding four divs within.
 - Inside our CSS page, make the container a 500px gray square containing 100px squares within that are red, blue, green, and black.
 
-Looking at the html:
+<!-- Ask devs to fight checking the solution like they may fight a tiger to protect their first-born child -->
+
+Check below when you are finished:
+
+<details>
+<summary>Looking at the html...</summary>
 
 ```html
 <link rel="stylesheet" type="text/css" href="main.css">
@@ -60,8 +65,10 @@ Looking at the html:
     <div id="square4"></div>
 </div>
 ```
+</details>
 
-And the CSS:
+<details>
+<summary>And the CSS...</summary>
 
 ```css
 #container {
@@ -90,6 +97,8 @@ And the CSS:
     width: 100px;
 }
 ```
+</details>
+
 
 Dynamite!  Now, navigate to your dev tools and under the elements tab, hover over each of the divs.  What do you notice? A "box" is being highlighted in your browswer!
 
@@ -116,6 +125,7 @@ _From [www.theslate.org](http://www.theslate.org)_
 
 But what do these different layers mean, and how are they relating to one another?
 
+<!--Whip around while you write words on board -->
 
 * **Margin** - clears an area around the border; the margin does not have a background color, it is completely transparent
 
@@ -130,7 +140,6 @@ But what do these different layers mean, and how are they relating to one anothe
 #### Layers of the Box Model - Catch Up
 
 Let's get go into some more detail and practice with each of these elements of The Box Model.
-
 
 #### Margin
 
@@ -169,6 +178,8 @@ div {
 }
 ```
 
+<!--Devs try all at once for catch-up -->
+
 #### Border
 
 We've talked briefly about borders - the border is the edge of the element. It's what we've been making visible every 
@@ -199,6 +210,8 @@ div {
   padding: 2px;
 }
 ```
+
+<!--Copy from screen but no copy-paste -->
 
 Update your CSS file to include this.
 
@@ -238,6 +251,8 @@ elements have been sitting on top of one another: by default, they take up the f
 We can change all this with the first positioning property we'll learn, the `display` property and the four values we 
 can use: inline, block, inline-block, and none.
 
+<!--Whip-around while listing on white board -->
+
 * An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs (not the whole line). Inline places all your elements on a single line. The bad news is that it doesn't maintain their "box"ness
 
 * A **block** element has some whitespace above and below it and does not tolerate any HTML elements next to it. This 
@@ -248,7 +263,6 @@ makes the element a block box. It won't let anything sit next to it on the page 
 * If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
 
 To illustrate this, if we had this HTML:
-
 
 ```html
 <div class="inline">
@@ -303,7 +317,6 @@ A page element with "relative positioning" gives you the control to "absolutely 
 it. This might not be obvious to everyone - that's probably because this isn't intuitive, at all. Let's look at an 
 example.
 
-
 ![css position relative](https://i.imgur.com/LRd7lBy.png)
 
 The relative positioning on the parent is what matters here. This what would happen if we forgot that:
@@ -330,8 +343,6 @@ Declaring `position:relative` allows you to position the element top, bottom, le
     left: 40px;
 }
 ```
-
-
 
 #### Static Positioning
 
@@ -372,7 +383,6 @@ Try it out:
 }
 ```
 
-
 #### Absolute Positioning
 
 Specifying `position:absolute` _removes the element from the document_ and places it exactly where you tell it to be.
@@ -388,6 +398,8 @@ Specifying `position:absolute` _removes the element from the document_ and place
 }
 ```
 
+<!--Catch-up all three if time -->
+
 <!--10:50 5 minutes -->
 
 ## Floats and Clears - Intro
@@ -398,6 +410,8 @@ will be wrapped around the element.
 <p style="text-align: center">
 <img src='https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png'>
 </p>
+
+<!-- Write "float removed from flow" on board -->
 
 Note that "absolutely positioned" elements ignore the float property as they are removed from the normal document flow.
 
@@ -419,7 +433,7 @@ All elements will float next to floated items until they are specifically cleare
 
 ## Using position, floats, and clears to create columns - Code along
 
-Now that we have the basics of relative and absolute positioning, lets create a two column layout by changing the 
+Now that we have the basics of relative and absolute positioning, let's create a two-column layout by changing the 
 heights; then, we'll investigate how to do this with floats and clears for a more effective approach.  
 
 So, without clears, change the heights of square1 and square2 to 200px and absolutely position the two squares like so:
@@ -476,7 +490,7 @@ We can reveal those missing divs by declaring their absolute position in the bot
 }
 ```
 
-This works fine when we know the exact sizes of our elements but what if we were building something like a blog and we 
+This works fine when we know the exact sizes of our elements, but what if we were building something like a blog and we 
 had text in those columns or surrounding them? We won't always know the exact amount of text or their font sizes. This 
 is where floats can help us.
 
@@ -501,7 +515,7 @@ Your html should like this:
 
 ```
 
-As expected our text falls behind our absolute positioned columns. Now lets make our elements aware of each other with floats.
+As expected our text falls behind our absolute positioned columns. Now let's make our elements aware of each other with floats.
 
 Back in our CSS remove the absolute positioning from our "square2" div and replace it with `float:left`:
 
@@ -528,7 +542,7 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 text respects its wishes and drops to the line below.
 
 ## Conclusion
-
+<!--Think-pair-share -->
 - Compare the elements of The Box Model - margin, border, padding, content.
 - How do floats work with clears to create a multicolumn layout?
 - Compare inline-block, block, and inline.
