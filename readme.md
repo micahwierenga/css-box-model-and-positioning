@@ -5,9 +5,9 @@
 
 -->
 
-<!--Time is still tight here.  If we can cut things out, we should. -->
+<!--Time is still tight here. -->
 
-<!--10:05 5 minutes -->
+<!--10:15 5 minutes -->
 
 <!-- Hook: Raise your hand if you have played Tetris before.  Think about trying to fit all those pieces together.  15 pieces have come through, and you just need that 4-blocks-in-a-line, but you keep getting those Ls.  Now you understand the frustration of the CSS Box Model and Positioning in web development. -->
 
@@ -37,7 +37,7 @@ The CSS box model describes this principle - a box wraps around all HTML element
 
 With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
 
-<!--10:10 10 minutes -->
+<!--10:20 10 minutes -->
 
 ## Box Model Demo - Catch Up
 
@@ -99,6 +99,7 @@ Check below when you are finished:
 ```
 </details>
 
+<!--Demo all this -->
 
 Dynamite!  Now, navigate to your dev tools and under the elements tab, hover over each of the divs.  What do you notice? A "box" is being highlighted in your browswer!
 
@@ -113,7 +114,7 @@ How about if we drop this code into our CSS file:
 
 Notice the body, the container, and each of the divs are surrounded by a red border.  Peek at the styles tab on the right and scroll all the way to the bottom.  You'll notice boxes within boxes - madness!
 
-<!--10:20 10 or 15 minutes-->
+<!--10:30 15 minutes-->
 
 ## The Box Model and its components - Intro
 
@@ -134,8 +135,6 @@ But what do these different layers mean, and how are they relating to one anothe
 * **Padding** - clears an area around the content; the space between the content and the border; the padding is affected by the background color of the box
 
 * **Content** - The content of the box, where text and images appear
-
-<!-- CFU: Catch phrase with all four words -->
 
 #### Layers of the Box Model - Catch Up
 
@@ -178,7 +177,7 @@ div {
 }
 ```
 
-<!--Devs try all at once for catch-up -->
+<!--Devs just do last for catch-up -->
 
 #### Border
 
@@ -211,7 +210,7 @@ div {
 }
 ```
 
-<!--Copy from screen but no copy-paste -->
+<!--Devs copy from screen but no copy-paste -->
 
 Update your CSS file to include this.
 
@@ -239,7 +238,9 @@ p {
 
 Amazing!  Add those styles to your CSS file.
 
-<!--10:30 10 minutes -->
+<!-- CFU: Catch phrase with all four words -->
+
+<!--10:45 10 minutes -->
 
 ## Taking Up Space using Display - Intro
 
@@ -249,7 +250,7 @@ As you saw, the outermost box of each element went all the way across the page. 
 elements have been sitting on top of one another: by default, they take up the full width of the page.
 
 We can change all this with the first positioning property we'll learn, the `display` property and the four values we 
-can use: inline, block, inline-block, and none.
+can use: `inline`, `block`, `inline-block`, and `none`.
 
 <!--Whip-around while listing on white board -->
 
@@ -307,27 +308,11 @@ We would end up with something like this:
 
 <!--CFU: Catch-phrase with block, inline, inline-block -->
 
-<!--10:40 10 minutes -->
+<!--10:55 10 minutes -->
 
 ## Positioning - Catch Up
 
-Another CSS property, "position", can take `relative` or `absolute` values, among others.
-
-A page element with "relative positioning" gives you the control to "absolutely position" children elements inside of 
-it. This might not be obvious to everyone - that's probably because this isn't intuitive, at all. Let's look at an 
-example.
-
-![css position relative](https://i.imgur.com/LRd7lBy.png)
-
-The relative positioning on the parent is what matters here. This is what would happen if we forgot that:
-
-![](https://i.imgur.com/0vGcPFL.png)
-
-In this small example, it doesn't seem to matter much, but it really is a significant change.
-
-⇒ The "absolutely positioned" elements are positioning themselves in relation to the body element, instead of their 
-direct parent. So if the browser window grows, that element in the bottom left is going to stick with the browser 
-window, not hang back inside, like it was the case in the previous example.
+Another CSS property, `position`, can take a `relative`, `absolute`, `fixed`, or `static` value.
 
 #### Relative Positioning
 
@@ -343,6 +328,41 @@ Declaring `position:relative` allows you to position the element top, bottom, le
     left: 40px;
 }
 ```
+
+#### Absolute Positioning
+
+Specifying `position:absolute` _removes the element from the document_ and places it exactly where you tell it to be.
+
+```css
+#square2 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+```
+
+You rarely explicitly declare `position:static` like this because it is the default.
+
+#### Fixed Positioning
+
+An element with fixed position is positioned relative to the browser window.  It will not move even if the window is scrolled, so a fixed positioned element will stay right where it is creating an effect a bit like the old school 
+"frames" days.
+
+```css
+#square3 {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    top: 0;
+    left: 0;
+}
+```
+
+<!--Catch-up all three -->
 
 #### Static Positioning
 
@@ -363,44 +383,7 @@ If we revisit our squares from earlier in class:
 }
 ```
 
-You rarely explicitly declare `position:static` like this because it is the default.
-
-#### Fixed Positioning
-
-An element with fixed position is positioned relative to the browser window.  It will not move even if the window is scrolled, so a fixed positioned element will stay right where it is creating an effect a bit like the old school 
-"frames" days.
-
-Try it out:
-
-```css
-#square2 {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    background-color: blue;
-    top: 0;
-    left: 0;
-}
-```
-
-#### Absolute Positioning
-
-Specifying `position:absolute` _removes the element from the document_ and places it exactly where you tell it to be.
-
-```css
-#square1 {
-    background-color: red;
-    height: 100px;
-    width: 100px;
-    position:absolute;
-    top: 0;
-    right: 0;
-}
-```
-
-<!--Catch-up all three if time -->
-
-<!--10:50 5 minutes -->
+<!--11:05 5 minutes -->
 
 ## Floats and Clears - Intro
 
@@ -410,8 +393,6 @@ will be wrapped around the element.
 <p style="text-align: center">
 <img src='https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png'>
 </p>
-
-<!-- Write "float removed from flow" on board -->
 
 Note that "absolutely positioned" elements ignore the float property as they are removed from the normal document flow.
 
@@ -429,7 +410,7 @@ All elements will float next to floated items until they are specifically cleare
 <img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
 </p>
 
-<!-- 10:55 15 minutes -->
+<!-- 11:10 15 minutes -->
 
 ## Using position, floats, and clears to create columns - Code along
 
@@ -540,6 +521,8 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 
 `Clear` is saying "I'm not sure how much space I'm going to take but whatever it is clear off my right side" so our 
 text respects its wishes and drops to the line below.
+
+<!--11:25 5 minutes -->
 
 ## Conclusion
 <!--Think-pair-share -->
