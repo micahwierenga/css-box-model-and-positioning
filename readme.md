@@ -15,7 +15,7 @@
 
 # CSS Box Model and Positioning
 
-Web pages, at a base level, are made out of boxes. As we've already seen with HTML, our website is basically a reverse game of tetris, in which each rectangular element stacks to the upper left based on how its shaped. Obviously, this is functional, but not orgnaized in the slightest. Today we're gonna look into one of the crucial ways to reshape these boxes into a more functional layout - the CSS Box Model. It will be a necessary cornerstone for almost every project you undertake.
+Web pages, at a base level, are made out of boxes. As we've already seen with HTML, our website is basically a reverse game of tetris, in which each rectangular element stacks to the upper left based on how its shaped. Obviously, this is functional, but not organized in the slightest. Today we're gonna look into one of the crucial ways to reshape these boxes into a more functional layout - the CSS Box Model. It will be a necessary cornerstone for almost every project you undertake.
 
 ### Objectives
 *After this lesson, students will be able to:*
@@ -27,17 +27,14 @@ Web pages, at a base level, are made out of boxes. As we've already seen with HT
 - **Create** a page with multi-column layout
 
 ### Preparation
-We're going to be building off a few tools we already know - HTML, CSS, and the Chrome dev tools. 
-Prior knowledge inventory: 
+We're going to be building off a couple of tools we already know - HTML and CSS. 
+Before starting, we should be clear on the following questions: 
 - What do we use HTML for? 
-- How does CSS build on CSS?
-- How does Dev tools help us learn about how HTML and CSS works together?
-- Remember to parking lot any answers that need private attention
+- How does CSS augment HTML?
 
 ## An Intro to The Box Model
 
 All HTML elements can be considered boxes. Even if you see a circle, it's living within a box. In fact, we can literally think of them as a series of moving boxes, sitting in an empty living room on your moving day - they have the same properties:
-If you were packing and arranging moving boxes for pickup, you'd have to consider a few things: 
 
 - **Width/Height**: How big is your box? This will determine how much of your crap you can stuff into it.
 - **Padding**: Let's say you were moving something fragile - you'd probably want to line your box with some packing peanuts or something simliar, to keep it away from the edges.
@@ -51,14 +48,14 @@ The sum of all these properties looks a little like this:
 
 <!--10:20 10 minutes -->
 
-## Box Model Demo - Catch Up
+## Box Model Demo
 
 Let's make some boxes to practice with. We're going to make a digital living room and arrange our boxes in a way that makes sense to us.
 
 - Create a new directory called `box-model-work`
 - Create an html page called `index.html` with an externally linked css stylesheet called `main.css`
 - Inside your html page create a "livingRoom" div holding four divs within. Change the background color to whatever color you want your carpet to be.
-- Inside our CSS page, make the container a 800px square containing 100px squares within that are red, blue, green, and yellow. Change your livingRoom background color to make the carpet a color you prefer.
+- Inside our CSS page, make the container a 800px square containing 100px squares within that are red, blue, green, and yellow.
 - Write some content in your boxes, to denote what's inside each box.
 
 <!-- Ask devs to fight checking the solution like they may fight a tiger to protect their first-born child -->
@@ -71,7 +68,7 @@ Check below when you are finished:
 ```html
 <link rel="stylesheet" type="text/css" href="main.css">
 
-<div id="contalivingRoominer">
+<div id="livingRoom">
     <div id="box1">Books</div>
     <div id="box2">Dishes</div>
     <div id="box3">Closet Junk</div>
@@ -176,7 +173,7 @@ Your red box is full of heavy stuff - make the borders extra thick so our metaph
 
 #### Padding and Content
 
-The padding is our packing peanuts - the spacing between the content and the border of the box. Unlike in real life, adding more padding to your box will increase it's size to accomdate - unless you've set an explicit heigh and width. Then it will smush the content inside.
+The padding is our packing peanuts - the spacing between the content and the border of the box. Unlike in real life, adding more padding to your box will increase it's size to accomdate - unless you've set an explicit height and width. Then it will smush the content inside.
 
 Padding accepts the same value types as margin:
 
@@ -344,7 +341,7 @@ All elements will float next to floated items until they are specifically cleare
 
 Now that we have the basics of relative and absolute positioning, let's turn our living room full of moving boxes into a two-column layout. Start by changing the heights; then, we'll investigate how to do this with floats and clears for a more effective approach.
 
-Without clears, change the heights of box1 and box2 to 200px and absolutely position the two squares like so:
+Without clears, change the heights of "box1" and "box2" to 200px and absolutely position the two squares like so:
 
 
 ```css
@@ -374,7 +371,7 @@ Without clears, change the heights of box1 and box2 to 200px and absolutely posi
 
 Note how our "box2" div is positioned to the top left of the container and "box1" to the top right. This was done to illustrate that absolute positioning doesn't care what order the elements appear in your html.
 
-Also, notice how we can't see box3 or box4? They are being covered up by our absolute-positioned "box2" div (remember, absolute positioning removes the element from the document flow).
+Also, notice how we can't see "box3" or "box4"? They are being covered up by our absolute-positioned "box2" div (remember, absolute positioning removes the element from the document flow).
 
 We can reveal those missing divs by declaring their absolute position in the bottom left and right of our container:
 
@@ -403,8 +400,8 @@ This works fine when we know the exact sizes of our elements - but what if we we
 
 If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element.  To illustrate this, lets first go to a favorite ipsum generator and grab four paragraphs of text.
 
-Now, let's venture back to our html page and add this text after the closing tag of our "square2" div and before the 
-opening tag of our "square3" div.
+Now, let's venture back to our html page and add this text after the closing tag of our "box2" div and before the 
+opening tag of our "box3" div.
 
 Your html should like this:
 
@@ -414,26 +411,26 @@ Your html should like this:
         <div id="box1"></div>
         <div id="box2"></div>
         <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum lectus eget nunc auctor, non convallis ligula pretium. Sed eget orci ipsum. Fusce felis erat, semper sit amet erat in, dictum sagittis leo. Nullam eget lobortis dolor, ut sagittis eros. Aenean varius augue ac diam sollicitudin faucibus. Aenean posuere ante leo, in vehicula est dictum in. Donec mattis diam mauris, a pretium turpis gravida vitae. Nullam et ultricies magna.
-            </p>
-            <p>
-                Proin turpis nisl, faucibus eget varius vel, ultrices sit amet lorem. Donec quis nunc sed libero varius tempor sit amet eu mi. Morbi maximus tincidunt eros eu mattis. Phasellus dapibus sollicitudin diam, ut dapibus neque facilisis a. Curabitur mi justo, ornare sed risus vel, ullamcorper hendrerit dolor. Etiam id tincidunt quam, vel imperdiet leo. Aenean sed turpis aliquet, tristique est non, placerat eros.
-            </p>
-            <p>
-                Donec vitae tincidunt elit. Praesent faucibus nisi ex, sed varius metus fringilla sed. Duis tempus est id fermentum dignissim. Praesent vel felis in diam aliquet dictum eget sed eros. Proin tempus tellus sem. Maecenas eget lectus justo. Aliquam a eros iaculis, condimentum velit a, porttitor odio. Vestibulum pharetra enim nunc, pretium fermentum tellus venenatis sed. Sed feugiat rutrum accumsan. Suspendisse quis ipsum vel lorem vestibulum eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas mollis, nulla non interdum cursus, libero ex vehicula enim, a hendrerit lacus odio nec est. In in lobortis neque, ac aliquet risus. Vivamus tempus placerat enim, nec laoreet nulla suscipit eget. Morbi quis euismod tellus, in sollicitudin lorem. Sed ut orci vitae massa elementum tristique in nec massa.
-            </p>
-            <p>
-                Fusce et nibh et odio malesuada dignissim vel at eros. Donec nec nunc fermentum, volutpat lacus in, ultrices ex. Nam non cursus arcu. Praesent nisl sem, fermentum eu pharetra quis, cursus eget magna. Donec ultrices lorem et quam pretium, vitae luctus ante commodo. Pellentesque tincidunt aliquet justo, in ultricies nisi pellentesque ac. Aenean porta ligula nec lacus viverra efficitur. Sed bibendum ornare urna eget scelerisque. Vestibulum bibendum turpis et nibh dapibus, in accumsan lacus dapibus. Maecenas vitae tortor eleifend, aliquam elit id, hendrerit magna. Donec placerat hendrerit dolor, ut dapibus purus mollis in. Aliquam erat volutpat. Fusce ultricies libero et scelerisque condimentum. Nunc sem ex, pretium id enim nec, facilisis luctus ligula. Morbi hendrerit ipsum in dolor tincidunt convallis ut a neque.
-            </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum lectus eget nunc auctor, non convallis ligula pretium. Sed eget orci ipsum. Fusce felis erat, semper sit amet erat in, dictum sagittis leo. Nullam eget lobortis dolor, ut sagittis eros. Aenean varius augue ac diam sollicitudin faucibus. Aenean posuere ante leo, in vehicula est dictum in. Donec mattis diam mauris, a pretium turpis gravida vitae. Nullam et ultricies magna.
+        </p>
+        <p>
+            Proin turpis nisl, faucibus eget varius vel, ultrices sit amet lorem. Donec quis nunc sed libero varius tempor sit amet eu mi. Morbi maximus tincidunt eros eu mattis. Phasellus dapibus sollicitudin diam, ut dapibus neque facilisis a. Curabitur mi justo, ornare sed risus vel, ullamcorper hendrerit dolor. Etiam id tincidunt quam, vel imperdiet leo. Aenean sed turpis aliquet, tristique est non, placerat eros.
+        </p>
+        <p>
+            Donec vitae tincidunt elit. Praesent faucibus nisi ex, sed varius metus fringilla sed. Duis tempus est id fermentum dignissim. Praesent vel felis in diam aliquet dictum eget sed eros. Proin tempus tellus sem. Maecenas eget lectus justo. Aliquam a eros iaculis, condimentum velit a, porttitor odio. Vestibulum pharetra enim nunc, pretium fermentum tellus venenatis sed. Sed feugiat rutrum accumsan. Suspendisse quis ipsum vel lorem vestibulum eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas mollis, nulla non interdum cursus, libero ex vehicula enim, a hendrerit lacus odio nec est. In in lobortis neque, ac aliquet risus. Vivamus tempus placerat enim, nec laoreet nulla suscipit eget. Morbi quis euismod tellus, in sollicitudin lorem. Sed ut orci vitae massa elementum tristique in nec massa.
+        </p>
+        <p>
+            Fusce et nibh et odio malesuada dignissim vel at eros. Donec nec nunc fermentum, volutpat lacus in, ultrices ex. Nam non cursus arcu. Praesent nisl sem, fermentum eu pharetra quis, cursus eget magna. Donec ultrices lorem et quam pretium, vitae luctus ante commodo. Pellentesque tincidunt aliquet justo, in ultricies nisi pellentesque ac. Aenean porta ligula nec lacus viverra efficitur. Sed bibendum ornare urna eget scelerisque. Vestibulum bibendum turpis et nibh dapibus, in accumsan lacus dapibus. Maecenas vitae tortor eleifend, aliquam elit id, hendrerit magna. Donec placerat hendrerit dolor, ut dapibus purus mollis in. Aliquam erat volutpat. Fusce ultricies libero et scelerisque condimentum. Nunc sem ex, pretium id enim nec, facilisis luctus ligula. Morbi hendrerit ipsum in dolor tincidunt convallis ut a neque.
+        </p>
         <div id="box3"></div>
         <div id="box4"></div>
     </div>
 
 ```
 
-As expected our text falls behind our absolute positioned columns. Now let's make our elements aware of each other with floats.
+As expected, our text falls behind our absolute positioned columns. Now let's make our elements aware of each other with floats.
 
-Back in our CSS remove the absolute positioning from our "box2" div and replace it with `float:left`:
+Back in our CSS, remove the absolute positioning from our "box2" div and replace it with `float:left`:
 
 ```css
 #box2 {
@@ -444,16 +441,16 @@ Back in our CSS remove the absolute positioning from our "box2" div and replace 
 }
 ```
 
-Note that our text is aware that our "box2" div wants to be as left as possible and kindly wraps it in a nice text hug!
+Note that our text is aware that our "box2" div wants to be as far left as possible, and kindly wraps it in a nice text hug!
 
 #### Floats with clears
 
-While floats make other elements aware of their location and give them text hugs, clears tell other elements that to leave them some space (i.e. no hugs).
+While floats make other elements aware of their location and give them text hugs, clears tell other elements to leave them some space (i.e. no hugs).
 
 ![](http://s2.quickmeme.com/img/73/73da31728b13520117e2dab7447b8f37c29071dbd452f21f7377969d08949463.jpg)
 
 
-Lets go back to our CSS and change our "box2" div's positioning from float:left to clear: right.
+Lets go back to our CSS and change our "box2" div's positioning from `float:left;` to `clear:right;`.
 
 `Clear` is saying "I'm not sure how much space I'm going to take, but whatever it is, clear off my right side". Our text respects its wishes and drops to the line below.
 
