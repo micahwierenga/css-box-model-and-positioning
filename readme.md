@@ -296,6 +296,7 @@ Specifying `position:absolute` _removes the element from the document flow_ and 
 ```
 
 There's no physical metaphor for this rule, because it allow your elements to overlap and intersect eachother. Sadly, real boxes do not work this way!
+
 ![](https://media.giphy.com/media/NOsfNQGivMFry/giphy.gif)
 
 
