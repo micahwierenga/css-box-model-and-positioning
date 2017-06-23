@@ -110,7 +110,7 @@ Check below when you are finished:
 </details>
 
 
-#### Layers of the Box Model
+### Layers of the Box Model
 
 Let's get go into some more detail and practice with each of these elements of The Box Model.
 
@@ -150,7 +150,7 @@ div {
 ```
 
 ##### Moving day Activity: 
-Whatever was in your your green box has began to smell. Adjust it's margin so that it's at least 40px away from all other boxes.
+Whatever was in your your green box has begun to smell. Adjust it's margin so that it's at least 40px away from all other boxes.
 
 
 <!--Devs just do last for catch-up -->
@@ -173,7 +173,7 @@ Your red box is full of heavy stuff - make the borders extra thick so our metaph
 
 #### Padding and Content
 
-The padding is our packing peanuts - the spacing between the content and the border of the box. Unlike in real life, adding more padding to your box will increase it's size to accomdate - unless you've set an explicit height and width. Then it will smush the content inside.
+The padding is our packing peanuts - the spacing between the content and the border of the box. Unlike in real life, adding more padding to your box will increase it's size to accomdate the contents of the box - that is, unless you've set an explicit height and width. Then it will smush the content inside.
 
 Padding accepts the same value types as margin:
 
@@ -183,15 +183,15 @@ div {
 }
 ```
 ##### Moving day Activity:
-- Put anything breakable in your blue box - make the padding at least 30px, we don't want anything getting broken!
-- Your yellow box is WAY too full. Put at least 175 characters in each of them. Keep in mind - you might have to make your box bigger.
+- Your blue box is full of breakable objects - make the padding at least 30px, we don't want anything getting broken!
+- Your yellow box is WAY too full. Put at least 175 characters in it. Keep in mind - you might have to make your box bigger.
 
 
 <!-- CFU: Catch phrase with all four words -->
 
 <!--10:45 10 minutes -->
 
-## Taking Up Space using Display - Intro
+## Display
 
 Our boxes are looking just about ready to move. Now, let's learn some CSS tools that can't be used on physical boxes!
 In the CSS box-model, you can further augment how your boxes are laid out with the `display` property. It has four main properties:
@@ -205,6 +205,9 @@ In the CSS box-model, you can further augment how your boxes are laid out with t
 * An **inline-block** element maintains the the properties of an inline element, but allows a width and height to be applied to it (as well as side margin/padding). This display style is good for wrapping lists of elements that are still block-like, such as a grid of products on amazon.
 
 * If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
+
+Here's a visual example:
+![Block vs. Inline Example](images/boxmodel-block-vs-inline.png)
 
 To illustrate this, if we had this HTML:
 
@@ -253,17 +256,17 @@ We would end up with something like this:
 
 <!--10:55 10 minutes -->
 
-## Positioning - Catch Up
+## Position
 
 Another CSS property, `position`, affects how our elements interact with other elements on the page. It can take a `relative`, `absolute`, `fixed`, or `static` value.
 
 #### Static Positioning
 
-`position:static` is the default value for position. You won't need to use this rule unless you're overriding a previous declaration.
+`position:static` is the default value for position. You won't need to declare this value unless you're overriding a previous declaration.
 
 #### Relative Positioning
 
-Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.  Let's add some CSS and see what happens:
+Declaring `position:relative` allows you to position the element top, bottom, left, or right, **relative to where it would normally occur**.  Let's add some CSS and see what happens:
 
 ```css
 #box1 {
@@ -275,11 +278,11 @@ Declaring `position:relative` allows you to position the element top, bottom, le
     left: 40px;
 }
 ```
-In our moving boxes metaphor, this is akin to saying "move the red box a few feet to the right of where it currently is."
+In our moving boxes metaphor, this is akin to saying "move the red box 40px to the right of where it currently is."
 
 #### Absolute Positioning
 
-Specifying `position:absolute` _removes the element from the document flow_ and places it exactly where you tell it to be.
+Specifying `position:absolute` _removes the element from the document flow_ and places it exactly where you tell it to be, relative to it's parent container.
 
 ```css
 #box2 {
@@ -314,34 +317,32 @@ An element with fixed position is positioned relative to the browser window. It 
 
 <!--11:05 5 minutes -->
 
-## Floats and Clears - Intro
+## Floats and Clears
 
-The float property specifies whether or not a box (or an element) should float; essentially,it left and right aligns block level elements. Non-floated elements, like text, will be wrapped around the floated elements.
+The float property specifies whether or not a box (or an element) should float; essentially, it left and right aligns block-level elements. Non-floated elements, like text, will be wrapped around the floated elements.
 
-<p style="text-align: center">
-<img src='https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png'>
-</p>
+![](https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png)
 
 > Note that "absolutely positioned" elements ignore the float property as they are removed from the normal document flow. Floated elements remain a part of the flow of the web page. This is distinctly different than page elements that use absolute positioning.
 
-There are four valid values for the float property. "Left" and "right" float elements those directions, respectively. 
-"None" (the default) ensures the element will not float and "inherit" which will assume the float value from that elements parent element.
+There are four valid values for the float property: 
+- **`left`** and **`right`** float elements in those directions, respectively. 
+- **`none`** (the default) ensures the element will not float.
+- **`inherit`** will assume the float value of the parent element.
 
 #### Clear
 
-All elements will float next to floated items until they are specifically cleared. When you put a `clear` on an element, you are essentially telling it perform a line break, and create a new row.
+Elements will wrap up next to floated items until they are specifically cleared. When you put a `clear` on an element, you are essentially telling it perform a line break, and create a new row.
 
-<p style="text-align: center">
-<img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
-</p>
+![](https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png)
 
 <!-- 11:10 15 minutes -->
 
-## Using position, floats, and clears to create columns - Code along
+## Using position, floats, and clears to create columns
 
-Now that we have the basics of relative and absolute positioning, let's turn our living room full of moving boxes into a two-column layout. Start by changing the heights; then, we'll investigate how to do this with floats and clears for a more effective approach.
+Now that we have the basics of relative and absolute positioning, let's turn our living room full of moving boxes into a two-column layout. Start by changing the heights; then we'll investigate how to use floats and clears for a more effective approach.
 
-Without clears, change the heights of "box1" and "box2" to 200px and absolutely position the two squares like so:
+Change the heights of "box1" and "box2" to 200px and absolutely position the two squares like so:
 
 
 ```css
@@ -373,7 +374,7 @@ Note how our "box2" div is positioned to the top left of the container and "box1
 
 Also, notice how we can't see "box3" or "box4"? They are being covered up by our absolute-positioned "box2" div (remember, absolute positioning removes the element from the document flow).
 
-We can reveal those missing divs by declaring their absolute position in the bottom left and right of our container:
+We can move those divs back into our field of view by declaring that they originate at `0px` off of the `bottom`, `left`, and `right` of our container:
 
 ```css
 #box3 {
@@ -400,8 +401,8 @@ This works fine when we know the exact sizes of our elements - but what if we we
 
 If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element.  To illustrate this, lets first go to a favorite ipsum generator and grab four paragraphs of text.
 
-Now, let's venture back to our html page and add this text after the closing tag of our "box2" div and before the 
-opening tag of our "box3" div.
+Now, let's venture back to our html page and add this text after the closing tag of our `box2` div and before the 
+opening tag of our `box3` div.
 
 Your html should like this:
 
@@ -430,7 +431,7 @@ Your html should like this:
 
 As expected, our text falls behind our absolute positioned columns. Now let's make our elements aware of each other with floats.
 
-Back in our CSS, remove the absolute positioning from our "box2" div and replace it with `float:left`:
+Back in our CSS, remove the absolute positioning from our `box2` div and replace it with `float:left`:
 
 ```css
 #box2 {
