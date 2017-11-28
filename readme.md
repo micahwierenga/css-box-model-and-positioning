@@ -7,6 +7,7 @@
 
 <!--Time is still tight here. -->
 
+<!--10:40 WDI6 -->
 <!--10:15 5 minutes -->
 
 <!-- Hook: Raise your hand if you have played Tetris before.  Think about trying to fit all those pieces together.  15 pieces have come through, and you just need that 4-blocks-in-a-line, but you keep getting those Ls.  Now you understand the frustration of the CSS Box Model and Positioning in web development. -->
@@ -109,6 +110,7 @@ Check below when you are finished:
 ```
 </details>
 
+<!--WDI6 11:00 -->
 
 ### Layers of the Box Model
 
@@ -150,10 +152,9 @@ div {
 ```
 
 ##### Moving day Activity: 
-Whatever was in your your green box has begun to smell. Adjust it's margin so that it's at least 40px away from all other boxes.
+Whatever was in your your green box has begun to smell. Adjust its margin so that it's at least 40px away from all other boxes.
 
-
-<!--Devs just do last for catch-up -->
+<!--11:09 WDI6 -->
 
 #### Border
 
@@ -170,6 +171,7 @@ div {
 ##### Moving day Activity:
 Your red box is full of heavy stuff - make the borders extra thick so our metaphorical cardboard won't rip.
 
+<!--WDI6 11:14 -->
 
 #### Padding and Content
 
@@ -186,9 +188,7 @@ div {
 - Your blue box is full of breakable objects - make the padding at least 30px, we don't want anything getting broken!
 - Your yellow box is WAY too full. Put at least 175 characters in it. Keep in mind - you might have to make your box bigger.
 
-
-<!-- CFU: Catch phrase with all four words -->
-
+<!--WDI6 11:24  -->
 <!--10:45 10 minutes -->
 
 ## Display
@@ -202,7 +202,7 @@ In the CSS box-model, you can further augment how your boxes are laid out with t
 
 * An **inline** element takes up only as much space as the content requires, and sits in the same line as preceeding elements. Margin and padding only affect the left and right sides of the elements. This display style is great for elements that should not disrupt the surrounding content, like a link in a paragraph of text.
 
-* An **inline-block** element maintains the the properties of an inline element, but allows a width and height to be applied to it (as well as side margin/padding). This display style is good for wrapping lists of elements that are still block-like, such as a grid of products on amazon.
+* An **inline-block** element maintains the properties of an inline element, but allows a width and height to be applied to it (as well as side margin/padding). This display style is good for wrapping lists of elements that are still block-like, such as a grid of products on amazon.
 
 * If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
 
@@ -255,6 +255,7 @@ We would end up with something like this:
 <!--CFU: Catch-phrase with block, inline, inline-block -->
 
 <!--10:55 10 minutes -->
+<!--WDI6 11:30 -->
 
 ## Position
 
@@ -282,7 +283,7 @@ In our moving boxes metaphor, this is akin to saying "move the red box 40px to t
 
 #### Absolute Positioning
 
-Specifying `position:absolute` _removes the element from the document flow_ and places it exactly where you tell it to be, relative to it's parent container.
+Specifying `position:absolute` _removes the element from the document flow_ and places it exactly where you tell it to be, relative to its parent container.
 
 ```css
 #box2 {
@@ -316,10 +317,13 @@ An element with fixed position is positioned relative to the browser window. It 
 ```
 
 <!--11:05 5 minutes -->
+<!--WDI6 11:35 -->
 
 ## Floats and Clears
 
 The float property specifies whether or not a box (or an element) should float; essentially, it left and right aligns block-level elements. Non-floated elements, like text, will be wrapped around the floated elements.
+
+<!--This also works with inline elements why do we say block? -->
 
 ![](https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png)
 
@@ -375,6 +379,8 @@ Note how our "box2" div is positioned to the top left of the container and "box1
 Also, notice how we can't see "box3" or "box4"? They are being covered up by our absolute-positioned "box2" div (remember, absolute positioning removes the element from the document flow).
 
 We can move those divs back into our field of view by declaring that they originate at `0px` off of the `bottom`, `left`, and `right` of our container:
+
+<!--WDI6 11:47 -->
 
 ```css
 #box3 {
@@ -479,6 +485,8 @@ To make sure we still remember these, we're going to act them out. Half of the c
 > Note - Padding and Border might be hard to act out. Let's stick with the first 5 properties.
 
 If you have post-its, take two of them and write one CSS property/value on each. Hand each of your two post-its to a different person.
+
+<!--12:15 WDI6 -->
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
