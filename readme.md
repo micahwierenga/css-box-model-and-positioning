@@ -10,9 +10,7 @@
 <!--10:40 WDI6 -->
 <!--10:15 5 minutes -->
 
-<!-- Hook: Raise your hand if you have played Tetris before.  Think about trying to fit all those pieces together.  15 pieces have come through, and you just need that 4-blocks-in-a-line, but you keep getting those Ls.  Now you understand the frustration of the CSS Box Model and Positioning in web development. -->
-
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+<!-- Hook: Raise your hand if you have played Tetris before. Think about trying to fit all those pieces together. Fifteen pieces have come through, and you just need that 4-blocks-in-a-line, but you keep getting those Ls. Now you understand the frustration of the CSS Box Model and Positioning in web development. -->
 
 # CSS Box Model and Positioning
 
@@ -24,11 +22,11 @@ Web pages, at a base level, are made out of boxes. As we've already seen with HT
 - **Describe** the difference between block, inline, and inline-block elements
 - **Adjust** element spacing using padding and margin
 - **Create** floating elements to position content removed from the standard document flow
-- **Explain** the difference between and use cases of static, relative, fixed, & absolute positioning
+- **Explain** the difference between and use cases of static, relative, fixed, and absolute positioning
 - **Create** a page with multi-column layout
 
 ### Preparation
-We're going to be building off a couple of tools we already know - HTML and CSS. 
+We're going to be building off a couple of tools we already know: HTML and CSS. 
 Before starting, we should be clear on the following questions: 
 - What do we use HTML for? 
 - How does CSS augment HTML?
@@ -38,7 +36,7 @@ Before starting, we should be clear on the following questions:
 All HTML elements can be considered boxes. Even if you see a circle, it's living within a box. In fact, we can literally think of them as a series of moving boxes, sitting in an empty living room on your moving day - they have the same properties:
 
 - **Width/Height**: How big is your box? This will determine how much of your crap you can stuff into it.
-- **Padding**: Let's say you were moving something fragile - you'd probably want to line your box with some packing peanuts or something simliar, to keep it away from the edges.
+- **Padding**: Let's say you were moving something fragile; you'd probably want to line your box with some packing peanuts or something simliar, to keep it away from the edges.
 - **Content**: How much stuff you're trying to cram into your box.
 - **Margin**: How far away from other boxes you want this particular box to be. For the sake of our metaphor, imagine that you were creating space between boxes with packing blankets.
 
@@ -57,7 +55,7 @@ Let's make some boxes to practice with. We're going to make a digital living roo
 - Create an html page called `index.html` with an externally linked css stylesheet called `main.css`
 - Inside your html page create a "livingRoom" div holding four divs within. Change the background color to whatever color you want your carpet to be.
 - Inside our CSS page, make the container a 800px square containing 100px squares within that are red, blue, green, and yellow.
-- Write some content in your boxes, to denote what's inside each box.
+- Write some content in your boxes to denote what's inside each box.
 
 <!-- Ask devs to fight checking the solution like they may fight a tiger to protect their first-born child -->
 
@@ -120,26 +118,26 @@ Let's get go into some more detail and practice with each of these elements of T
 
 The margin is the space around the element. The larger the margin, the more space between our element and the elements around it. We can adjust the margin to move our HTML elements closer to or farther from each other. Adjusting our margins not only moves our element relative to other elements on the page, but also relative to the "walls" of the HTML document.
 
-For instance, if we take an HTML element with a specific width (such as our `<div>` in the editor) and set its margin to `auto` - this tells the document to automatically put equal left and right margins on our element, centering it on the page.
+For instance, if we take an HTML element with a specific width (such as any one of our `<div>` elements in the editor) and set its margin to `auto`, this tells the document to automatically put equal left and right margins on our element, centering it on the page.
 
-If you want to specify a particular margin, to a particular side, you can do it like this:
+If you want to specify the margin of a particular side, you can do it like this:
 
 ```css
 div {
-  margin-top: /*some value*/
-  margin-right: /*some value*/
-  margin-bottom: /*some value*/
-  margin-left: /*some-value*/
+    margin-top: /*some value*/
+    margin-right: /*some value*/
+    margin-bottom: /*some value*/
+    margin-left: /*some-value*/
 }
 
 ```
 
-You can also set an element's margins all at once: you just start from the top margin and go around clockwise (going 
-from top to right to bottom to left). For instance,
+You can also set an element's margins all at once. You just start from the top margin and go around clockwise (going 
+from top to right to bottom to left). For instance:
 
 ```css
 div {
-  margin: 1px 2px 3px 4px;
+    margin: 1px 2px 3px 4px;
 }
 ```
 
@@ -147,7 +145,7 @@ You can even do top-bottom and side-side:
 
 ```css
 div {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 ```
 
@@ -158,49 +156,48 @@ Whatever was in your your green box has begun to smell. Adjust its margin so tha
 
 #### Border
 
-We've talked briefly about borders - the border is the edge of the element. It's what we've been making visible every time we set the border property.
+We've talked briefly about borders, which refers to the edges of the element. It's what we've been making visible every time we set the border property.
 
-the border property accepts three values - thickness, pattern, and color:
+The border property accepts three values: thickness, pattern, and color:
 
 ```css
 div {
-  border: 5px solid black;
+    border: 5px solid black;
 }
 ```
 
 ##### Moving day Activity:
-Your red box is full of heavy stuff - make the borders extra thick so our metaphorical cardboard won't rip.
+Your red box is full of heavy stuff, so make the borders extra thick to prevent our metaphorical cardboard from ripping.
 
 <!--WDI6 11:14 -->
 
 #### Padding and Content
 
-The padding is our packing peanuts - the spacing between the content and the border of the box. Unlike in real life, adding more padding to your box will increase it's size to accomdate the contents of the box - that is, unless you've set an explicit height and width. Then it will smush the content inside.
+The padding is our packing peanuts - the spacing between the content and the border of the box. Unlike in real life, adding more padding to your box will increase it's size to accomdate the contents of the box. If, however, the height and width are explicitly set, it will only affect the area around the content portion of the box, leaving the size of the content unaffected. If those properties aren't set, it will manipulate the content area.
 
 Padding accepts the same value types as margin:
 
 ```css
 div {
-  padding: 2px;
+    padding: 2px;
 }
 ```
 ##### Moving day Activity:
-- Your blue box is full of breakable objects - make the padding at least 30px, we don't want anything getting broken!
-- Your yellow box is WAY too full. Put at least 175 characters in it. Keep in mind - you might have to make your box bigger.
+- Your blue box is full of breakable objects. Make the padding at least 30px, because we don't want anything getting broken!
+- Your yellow box is WAY too full. Put at least 175 characters in it. Keep in mind, you might have to make your box bigger.
 
 <!--WDI6 11:24  -->
 <!--10:45 10 minutes -->
 
 ## Display
 
-Our boxes are looking just about ready to move. Now, let's learn some CSS tools that can't be used on physical boxes!
-In the CSS box-model, you can further augment how your boxes are laid out with the `display` property. It has four main properties:
+Our boxes are looking just about ready to move. Now, let's learn some CSS tools that can't be used on physical boxes. In the CSS box model, you can further augment how your boxes are laid out with the `display` property. It has four main properties:
 
 <!--Whip-around while listing on white board -->
 
 * A **block** element takes up the full width of its container by default, regardless of the content inside of it. It doesn't allow any other elements to sit next to it. It's best for large containers and other sizeable page content.
 
-* An **inline** element takes up only as much space as the content requires, and sits in the same line as preceeding elements. Margin and padding only affect the left and right sides of the elements. This display style is great for elements that should not disrupt the surrounding content, like a link in a paragraph of text.
+* An **inline** element takes up only as much space as the content requires, and sits in the same line as preceeding elements. Margin and padding only affect the left and right sides of the elements. This display style is great for elements that should not disrupt the surrounding content; for example, a link within the text of a paragraph.
 
 * An **inline-block** element maintains the properties of an inline element, but allows a width and height to be applied to it (as well as side margin/padding). This display style is good for wrapping lists of elements that are still block-like, such as a grid of products on amazon.
 
