@@ -264,7 +264,7 @@ Another CSS property, `position`, affects how our elements interact with other e
 
 #### Relative Positioning
 
-Declaring `position:relative` allows you to position the element top, bottom, left, or right, **relative to where it would normally occur**.  Let's add some CSS and see what happens:
+Declaring `position:relative` allows you to position the element top, bottom, left, or right, **relative to where it would normally occur**. Let's add some CSS and see what happens:
 
 ```css
 #box1 {
@@ -293,14 +293,14 @@ Specifying `position:absolute` _removes the element from the document flow_ and 
 }
 ```
 
-There's no physical metaphor for this rule, because it allow your elements to overlap and intersect eachother. Sadly, real boxes do not work this way!
+There's no physical metaphor for this rule, because it allows your elements to overlap and intersect eachother. Sadly, real boxes do not work this way!
 
 ![](https://media.giphy.com/media/NOsfNQGivMFry/giphy.gif)
 
 
 #### Fixed Positioning
 
-An element with fixed position is positioned relative to the browser window. It will not move even if the window is scrolled - it's good for headers and footer that you want to remain stationary even as the user scrolls. 
+An element with fixed position is positioned relative to the browser window. It will not move even if the window is scrolled. It's good for headers and footer that you want to remain stationary even as the user scrolls. 
 
 ```css
 #box3 {
