@@ -402,7 +402,7 @@ This works fine when we know the exact sizes of our elements - but what if we we
 
 #### Floats to create multicolumn layouts
 
-If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element.  To illustrate this, lets first go to a favorite ipsum generator and grab four paragraphs of text.
+If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element. To illustrate this, let's first go to a favorite ipsum generator and grab four paragraphs of text.
 
 Now, let's venture back to our html page and add this text after the closing tag of our `box2` div and before the 
 opening tag of our `box3` div.
@@ -445,18 +445,18 @@ Back in our CSS, remove the absolute positioning from our `box2` div and replace
 }
 ```
 
-Note that our text is aware that our "box2" div wants to be as far left as possible, and kindly wraps it in a nice text hug!
+Note that our text is aware that our `box2` div wants to be as far left as possible, and kindly wraps it in a nice text hug!
 
 #### Floats with clears
 
-While floats make other elements aware of their location and give them text hugs, clears tell other elements to leave them some space (i.e. no hugs).
+While floats make other elements aware of their location and give them text hugs, clears tell other elements to leave them some space (i.e., no hugs).
 
 ![](http://s2.quickmeme.com/img/73/73da31728b13520117e2dab7447b8f37c29071dbd452f21f7377969d08949463.jpg)
 
 
-Lets go back to our CSS and change our "box2" div's positioning from `float:left;` to `clear:right;`.
+Lets go back to our CSS and change our `box2` div's positioning from `float:left;` to `clear:right;`.
 
-`Clear` is saying "I'm not sure how much space I'm going to take, but whatever it is, clear off my right side". Our text respects its wishes and drops to the line below.
+`Clear` is saying, "I'm not sure how much space I'm going to take, but whatever it is, clear off my right side." Our text respects its wishes and drops to the line below.
 
 <!--11:25 5 minutes -->
 
@@ -466,7 +466,7 @@ Lets go back to our CSS and change our "box2" div's positioning from `float:left
 - Compare inline-block, block, and inline.
 - How do floats work with clears to create a multicolumn layout?
 
-## Positioning Excercise - Living Box Model
+## Positioning Excercise: Living Box Model
 
 Let's recap the CSS box model. It's main properties are:
 
@@ -478,8 +478,8 @@ Let's recap the CSS box model. It's main properties are:
 - Padding*
 - Border*
 
-To make sure we still remember these, we're going to act them out. Half of the class will get a pad of post-its to write CSS properties on, and the other half has to act them out.
-> Note - Padding and Border might be hard to act out. Let's stick with the first 5 properties.
+<!--To make sure we still remember these, we're going to act them out. Half of the class will get a pad of post-its to write CSS properties on, and the other half has to act them out.
+> Note - Padding and Border might be hard to act out. Let's stick with the first 5 properties.-->
 
 If you have post-its, take two of them and write one CSS property/value on each. Hand each of your two post-its to a different person.
 
