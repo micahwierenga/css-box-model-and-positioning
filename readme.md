@@ -466,17 +466,17 @@ Lets go back to our CSS and change our `box2` div's positioning from `float:left
 - Compare inline-block, block, and inline.
 - How do floats work with clears to create a multicolumn layout?
 
-## Positioning Excercise: Living Box Model
+<!--## Positioning Excercise: Living Box Model-->
 
-Let's recap the CSS box model. It's main properties are:
+<!--Let's recap the CSS box model. It's main properties are:-->
 
-- Display
+<!--- Display
 - Float
 - Clear
 - Position
 - Margin
 - Padding*
-- Border*
+- Border*-->
 
 <!--To make sure we still remember these, we're going to act them out. Half of the class will get a pad of post-its to write CSS properties on, and the other half has to act them out.
 > Note - Padding and Border might be hard to act out. Let's stick with the first 5 properties.-->
